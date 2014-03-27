@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93B1915418DA3F1400F429BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B1915318DA3F1400F429BD /* Foundation.framework */; };
+		93B1915618DA3F1400F429BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B1915518DA3F1400F429BD /* CoreGraphics.framework */; };
+		93B1915818DA3F1400F429BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B1915718DA3F1400F429BD /* UIKit.framework */; };
+		93B1915E18DA3F1400F429BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93B1915C18DA3F1400F429BD /* InfoPlist.strings */; };
+		93B1916018DA3F1400F429BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B1915F18DA3F1400F429BD /* main.m */; };
+		93B1916418DA3F1400F429BD /* AppLoginDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B1916318DA3F1400F429BD /* AppLoginDelegate.m */; };
+		93B1916718DA3F1400F429BD /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B1916518DA3F1400F429BD /* Main_iPhone.storyboard */; };
+		93B1916D18DA3F1400F429BD /* AppLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B1916C18DA3F1400F429BD /* AppLoginViewController.m */; };
+		93B1916F18DA3F1400F429BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93B1916E18DA3F1400F429BD /* Images.xcassets */; };
+		93EB6BDE18DDCABD00832713 /* MVIDDeviceConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EB6BDD18DDCABD00832713 /* MVIDDeviceConnector.framework */; };
+		93EB6BE418DDD26400832713 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93EB6BE318DDD26400832713 /* Main_iPad.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		93B1915018DA3F1400F429BD /* MVIDExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVIDExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93B1915318DA3F1400F429BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		93B1915518DA3F1400F429BD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		93B1915718DA3F1400F429BD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		93B1915D18DA3F1400F429BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		93B1915F18DA3F1400F429BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		93B1916118DA3F1400F429BD /* MVIDExampleApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVIDExampleApp-Prefix.pch"; sourceTree = "<group>"; };
+		93B1916218DA3F1400F429BD /* AppLoginDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppLoginDelegate.h; sourceTree = "<group>"; };
+		93B1916318DA3F1400F429BD /* AppLoginDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppLoginDelegate.m; sourceTree = "<group>"; };
+		93B1916618DA3F1400F429BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		93B1916B18DA3F1400F429BD /* AppLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppLoginViewController.h; sourceTree = "<group>"; };
+		93B1916C18DA3F1400F429BD /* AppLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppLoginViewController.m; sourceTree = "<group>"; };
+		93B1916E18DA3F1400F429BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		93B1917518DA3F1400F429BD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		93EB6BDD18DDCABD00832713 /* MVIDDeviceConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MVIDDeviceConnector.framework; path = "../MVIDDeviceConnector/Frameworks/Release/MVIDDeviceConnector.framework"; sourceTree = "<group>"; };
+		93EB6BE318DDD26400832713 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main_iPad.storyboard; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93B1914D18DA3F1400F429BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EB6BDE18DDCABD00832713 /* MVIDDeviceConnector.framework in Frameworks */,
+				93B1915618DA3F1400F429BD /* CoreGraphics.framework in Frameworks */,
+				93B1915818DA3F1400F429BD /* UIKit.framework in Frameworks */,
+				93B1915418DA3F1400F429BD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93B1914718DA3F1400F429BD = {
+			isa = PBXGroup;
+			children = (
+				93B1915918DA3F1400F429BD /* MVIDExampleApp */,
+				93B1915218DA3F1400F429BD /* Frameworks */,
+				93B1915118DA3F1400F429BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93B1915118DA3F1400F429BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93B1915018DA3F1400F429BD /* MVIDExampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93B1915218DA3F1400F429BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93EB6BDD18DDCABD00832713 /* MVIDDeviceConnector.framework */,
+				93B1915318DA3F1400F429BD /* Foundation.framework */,
+				93B1915518DA3F1400F429BD /* CoreGraphics.framework */,
+				93B1915718DA3F1400F429BD /* UIKit.framework */,
+				93B1917518DA3F1400F429BD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93B1915918DA3F1400F429BD /* MVIDExampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				93B1916218DA3F1400F429BD /* AppLoginDelegate.h */,
+				93B1916318DA3F1400F429BD /* AppLoginDelegate.m */,
+				93B1916518DA3F1400F429BD /* Main_iPhone.storyboard */,
+				93EB6BE318DDD26400832713 /* Main_iPad.storyboard */,
+				93B1916B18DA3F1400F429BD /* AppLoginViewController.h */,
+				93B1916C18DA3F1400F429BD /* AppLoginViewController.m */,
+				93B1916E18DA3F1400F429BD /* Images.xcassets */,
+				93B1915A18DA3F1400F429BD /* Supporting Files */,
+			);
+			path = MVIDExampleApp;
+			sourceTree = "<group>";
+		};
+		93B1915A18DA3F1400F429BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93B1915C18DA3F1400F429BD /* InfoPlist.strings */,
+				93B1915F18DA3F1400F429BD /* main.m */,
+				93B1916118DA3F1400F429BD /* MVIDExampleApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93B1914F18DA3F1400F429BD /* MVIDExampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93B1918518DA3F1400F429BD /* Build configuration list for PBXNativeTarget "MVIDExampleApp" */;
+			buildPhases = (
+				93B1914C18DA3F1400F429BD /* Sources */,
+				93B1914D18DA3F1400F429BD /* Frameworks */,
+				93B1914E18DA3F1400F429BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MVIDExampleApp;
+			productName = TestMVID;
+			productReference = 93B1915018DA3F1400F429BD /* MVIDExampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93B1914818DA3F1400F429BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Home;
+				TargetAttributes = {
+					93B1914F18DA3F1400F429BD = {
+						DevelopmentTeam = 9R34989BYZ;
+					};
+				};
+			};
+			buildConfigurationList = 93B1914B18DA3F1400F429BD /* Build configuration list for PBXProject "MVIDExampleApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93B1914718DA3F1400F429BD;
+			productRefGroup = 93B1915118DA3F1400F429BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93B1914F18DA3F1400F429BD /* MVIDExampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93B1914E18DA3F1400F429BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93B1916F18DA3F1400F429BD /* Images.xcassets in Resources */,
+				93EB6BE418DDD26400832713 /* Main_iPad.storyboard in Resources */,
+				93B1916718DA3F1400F429BD /* Main_iPhone.storyboard in Resources */,
+				93B1915E18DA3F1400F429BD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93B1914C18DA3F1400F429BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93B1916D18DA3F1400F429BD /* AppLoginViewController.m in Sources */,
+				93B1916418DA3F1400F429BD /* AppLoginDelegate.m in Sources */,
+				93B1916018DA3F1400F429BD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		93B1915C18DA3F1400F429BD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93B1915D18DA3F1400F429BD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		93B1916518DA3F1400F429BD /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93B1916618DA3F1400F429BD /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93B1918318DA3F1400F429BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93B1918418DA3F1400F429BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93B1918618DA3F1400F429BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"../MVIDDeviceConnector/Frameworks/Release/**",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MVIDExampleApp/MVIDExampleApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../MVIDDeviceConnector/include,
+				);
+				INFOPLIST_FILE = "MVIDExampleApp/MVIDExampleApp-Info.plist";
+				PRODUCT_NAME = MVIDExampleApp;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		93B1918718DA3F1400F429BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"../MVIDDeviceConnector/Frameworks/Release/**",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MVIDExampleApp/MVIDExampleApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../MVIDDeviceConnector/include,
+				);
+				INFOPLIST_FILE = "MVIDExampleApp/MVIDExampleApp-Info.plist";
+				PRODUCT_NAME = MVIDExampleApp;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93B1914B18DA3F1400F429BD /* Build configuration list for PBXProject "MVIDExampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93B1918318DA3F1400F429BD /* Debug */,
+				93B1918418DA3F1400F429BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93B1918518DA3F1400F429BD /* Build configuration list for PBXNativeTarget "MVIDExampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93B1918618DA3F1400F429BD /* Debug */,
+				93B1918718DA3F1400F429BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93B1914818DA3F1400F429BD /* Project object */;
+}
