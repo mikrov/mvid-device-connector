@@ -376,7 +376,7 @@ enum ServiceResult {
 - (void) releaseDeviceRegistration;
 /**
  Release the device-side knowledge about whether or not access has been granted to an application. This
- will force the application to do a server-side check next time DeviceSecurity.doLogin is used.
+ will force the application to do a server-side check next time \link DeviceSecurity.doLogin:parentViewController:altSubView: doLogin\endlink is used.
  
  This will not throw away the device registration, so re-login by user is not needed next time the device
  is online.
@@ -387,8 +387,8 @@ enum ServiceResult {
      [device_security releaseApplicationUsage:@"products.ios.ml.myapp"]ß	;
  @endcode
  
- @param pixels
-    The amount of pixels to displace the center with.
+ @param access_identifier
+    The access_identifier to be released.
  */
 - (void) releaseApplicationUsage:(NSString* )access_identifier;
 @end

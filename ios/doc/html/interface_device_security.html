@@ -599,14 +599,14 @@ Coding example</h2>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Release the device-side knowledge about whether or not access has been granted to an application. This will force the application to do a server-side check next time DeviceSecurity.doLogin is used.</p>
+<p>Release the device-side knowledge about whether or not access has been granted to an application. This will force the application to do a server-side check next time <a class="el" href="interface_device_security.html#a59d9ba26ad151f17c38a4942cbde2381">doLogin</a> is used.</p>
 <p>This will not throw away the device registration, so re-login by user is not needed next time the device is online.</p>
 <p>Example usage: </p>
 <div class="fragment"><div class="line"><span class="comment">// Forget whether access is granted or not to MyApp</span></div>
 <div class="line">[device_security releaseApplicationUsage:<span class="stringliteral">@&quot;products.ios.ml.myapp&quot;</span>]ß ;</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pixels</td><td>The amount of pixels to displace the center with. </td></tr>
+    <tr><td class="paramname">access_identifier</td><td>The access_identifier to be released. </td></tr>
   </table>
   </dd>
 </dl>
@@ -668,7 +668,7 @@ Coding example</h2>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_device_security.html">DeviceSecurity</a></li>
-    <li class="footer">Generated on Thu Mar 27 2014 09:29:46 for MVIDDeciveConnector by
+    <li class="footer">Generated on Thu Mar 27 2014 11:02:41 for MVIDDeciveConnector by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>
