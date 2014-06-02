@@ -9,11 +9,26 @@
     tools:context="com.mvnordic.mvidexampleapp.AppLoginActivity$PlaceholderFragment" >
 
     <Button
+        android:id="@+id/release_device_hash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/release" />
+
+    <Button
         android:id="@+id/mvid_login_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/login" />
+
+    <Spinner
+        android:id="@+id/ai_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Button" />
+        android:layout_centerVertical="true" />
 
 </RelativeLayout>
