@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list_of_ais">
+        <item>product.ios.da.intowords</item>
+        <item>product.ios.nb.intowords</item>
+        <item>product.web.da.intowords</item>
+        <item>product.web.da.10fingers</item>
+        <item>product.android.da.intowords</item>
+   </string-array>    
+</resources>
