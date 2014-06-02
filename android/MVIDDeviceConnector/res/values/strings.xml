@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MVIDDeviceConnector</string>
+	<string name="login_activity_manifest">In order to start MVID Login process as an activity you need to mention it in your app\'s AndroidManifest.xml:\ncom.mvnordic.mviddeviceconnector.LoginActivity</string>
+</resources>
