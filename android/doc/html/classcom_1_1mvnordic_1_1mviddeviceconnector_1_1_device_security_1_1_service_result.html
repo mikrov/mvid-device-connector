@@ -109,6 +109,8 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a60adfee7962da894fb870c784fb2a249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf554ba79e7493ec7b5bdda6ba75327a"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1mvnordic_1_1mviddeviceconnector_1_1_device_security_1_1_service_result.html#aaf554ba79e7493ec7b5bdda6ba75327a">NetworkError</a> = 128</td></tr>
 <tr class="separator:aaf554ba79e7493ec7b5bdda6ba75327a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a887c5c3f14fb136a31fbac78df0f7be0"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1mvnordic_1_1mviddeviceconnector_1_1_device_security_1_1_service_result.html#a887c5c3f14fb136a31fbac78df0f7be0">LoginCancelled</a> = 256</td></tr>
+<tr class="separator:a887c5c3f14fb136a31fbac78df0f7be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Following values apply to the <a href="https://signon.mv-nordic.com/device-security/DeviceSecurity">DeviceSecurity</a> web service. In the descriptions below it is specified which methods in the <a class="el" href="classcom_1_1mvnordic_1_1mviddeviceconnector_1_1_device_security.html">DeviceSecurity</a> class that can recieve which results directly.</p>
@@ -218,6 +220,33 @@ Static Public Attributes</h2></td></tr>
 <ul>
 <li>DeviceSecurity.registerDevice:<ul>
 <li>The mv_session_id passed to registerDevice is invalid. Obvious reason would be that it is too old and therefore timed out on the server side. </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<a class="anchor" id="a887c5c3f14fb136a31fbac78df0f7be0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int com.mvnordic.mviddeviceconnector.DeviceSecurity.ServiceResult.LoginCancelled = 256</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>User cancelled login process.</p>
+<ul>
+<li>DeviceSecurity.applicationLogin:<ul>
+<li>The user backed out of the activity responsible for logging into MVID without logging in. </li>
 </ul>
 </li>
 </ul>
@@ -338,7 +367,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 3 2014 13:53:36 for MVIDDeviceConnector for Android by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 26 2014 14:54:08 for MVIDDeviceConnector for Android by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

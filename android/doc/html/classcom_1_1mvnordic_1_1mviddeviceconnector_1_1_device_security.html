@@ -119,6 +119,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a14899c5f64246399a62e5b172a82bba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09506b81338a7dea312229fd284c1dc4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1mvnordic_1_1mviddeviceconnector_1_1_device_security.html#a09506b81338a7dea312229fd284c1dc4">doLogin</a> (String access_identifier, int fragment_container_id)</td></tr>
 <tr class="separator:a09506b81338a7dea312229fd284c1dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae42da422cbd9ec7e7c2b938b8f2cd4ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1mvnordic_1_1mviddeviceconnector_1_1_device_security.html#ae42da422cbd9ec7e7c2b938b8f2cd4ff">checkLogin</a> (String access_identifier)</td></tr>
+<tr class="separator:ae42da422cbd9ec7e7c2b938b8f2cd4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a212841dae72d074b61fe52e61b5772f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1mvnordic_1_1mviddeviceconnector_1_1_device_security.html#a212841dae72d074b61fe52e61b5772f9">releaseDeviceRegistration</a> ()</td></tr>
 <tr class="separator:a212841dae72d074b61fe52e61b5772f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a193c488ccb006e29d5819e67cfd95109"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1mvnordic_1_1mviddeviceconnector_1_1_device_security.html#a193c488ccb006e29d5819e67cfd95109">getMVSessionID</a> (String access_identifier)</td></tr>
@@ -281,6 +283,39 @@ Coding example</h2>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="ae42da422cbd9ec7e7c2b938b8f2cd4ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.mvnordic.mviddeviceconnector.DeviceSecurity.checkLogin </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>access_identifier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the device/application is registered and has access to a specific product. This will work in offline mode aswell if <a class="el" href="classcom_1_1mvnordic_1_1mviddeviceconnector_1_1_device_security.html#a14899c5f64246399a62e5b172a82bba2">doLogin()</a> has been called successfully within the device/application's borrow time.</p>
+<p>Example usage: </p>
+<div class="fragment"><div class="line"><span class="comment">// Check if the user has access to access_identifier</span></div>
+<div class="line"><span class="keywordtype">int</span> req_id = device_security.checkLogin(access_identifier);</div>
+<div class="line"><span class="keywordflow">if</span> (req_id == 0) {</div>
+<div class="line">   <span class="comment">// Device has not been registered so access is denied.</span></div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span> {</div>
+<div class="line">   <span class="comment">// The request is being processed and will be notified on completion.</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">access_identifier</td><td>The access_identifier that needs to be checked. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The request ID of the login process or 0 if device not registered. This ID corresponds with the MVIDResponse which is notified via DeviceSecurityListener.onMVIDResponseReady(). So it is possible to distinguish between login results in a multi-threaded environment. </dd></dl>
 
 </div>
 </div>
@@ -520,7 +555,7 @@ Coding example</h2>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 3 2014 13:53:36 for MVIDDeviceConnector for Android by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 26 2014 14:54:08 for MVIDDeviceConnector for Android by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
