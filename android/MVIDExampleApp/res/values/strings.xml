@@ -6,5 +6,8 @@
     <string name="action_settings">Settings</string>
     <string name="release">Release Device</string>
     <string name="login">Login</string>
+    <string name="checklogin">Check AI</string>
+    <string name="fragment_login">Fragment Login</string>
+    <string name="activity_login">Activity Login</string>
 
 </resources>

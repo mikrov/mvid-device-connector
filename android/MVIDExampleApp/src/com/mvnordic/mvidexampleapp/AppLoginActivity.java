@@ -2,6 +2,7 @@ package com.mvnordic.mvidexampleapp;
 
 import com.mvnordic.mviddeviceconnector.DeviceSecurity;
 import com.mvnordic.mviddeviceconnector.DeviceSecurity.DeviceSecurityListener.MVIDResponse;
+import com.mvnordic.mviddeviceconnector.DeviceSecurity.ServiceResult;
 
 import android.app.Activity;
 import android.app.ActionBar;
@@ -62,6 +63,9 @@ public class AppLoginActivity extends Activity {
     public static class PlaceholderFragment extends Fragment {
 
     	private DeviceSecurity m_device_security = null;
+    	private Button m_release_button = null;
+    	private Button m_login_button = null;
+    	private Button m_check_login_button = null;
     	
         public PlaceholderFragment() {
         }
@@ -76,6 +80,11 @@ public class AppLoginActivity extends Activity {
     					response.has_access ? "YES" : "NO" );
     			Toast.makeText(getView().getContext(), toast, 
     					   Toast.LENGTH_SHORT).show();
+    			if (response.has_access==false) {
+    				m_device_security.releaseDeviceRegistration();
+    			}
+        		m_release_button.setVisibility(response.has_access ? Button.VISIBLE : Button.INVISIBLE);
+        		m_login_button.setVisibility(response.has_access ? Button.INVISIBLE : Button.VISIBLE);
     		}
     		
     	};
@@ -89,8 +98,7 @@ public class AppLoginActivity extends Activity {
             m_device_security.addDeviceSecurityListener(device_security_listener);
             
             View rootView = inflater.inflate(R.layout.fragment_app_login, container, false);
-            Button login_button = (Button) rootView.findViewById(R.id.mvid_login_btn);
-            
+           
     		final Spinner spinner = (Spinner) rootView.findViewById(R.id.ai_spinner);
     		// Create an ArrayAdapter using the string array and a default spinner layout
     		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(rootView.getContext(),
@@ -100,6 +108,7 @@ public class AppLoginActivity extends Activity {
     		// Apply the adapter to the spinner
     		spinner.setAdapter(adapter);
 
+            m_login_button = (Button) rootView.findViewById(R.id.mvid_login_btn);
             OnClickListener login_listener = new OnClickListener() {
 
 				@Override
@@ -108,14 +117,31 @@ public class AppLoginActivity extends Activity {
 				}
             	
             };
-            login_button.setOnClickListener(login_listener);
+            m_login_button.setOnClickListener(login_listener);
 
-    		Button release_button = (Button) rootView.findViewById(R.id.release_device_hash);
-    		release_button.setOnClickListener(new OnClickListener() {
+            m_check_login_button = (Button) rootView.findViewById(R.id.mvid_check_login_btn);
+            OnClickListener check_login_listener = new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					m_device_security.checkLogin(spinner.getSelectedItem().toString());
+				}
+            	
+            };
+            m_check_login_button.setOnClickListener(check_login_listener);
+            
+    		m_release_button = (Button) rootView.findViewById(R.id.release_device_hash);
+    		m_release_button.setOnClickListener(new OnClickListener() {
     			public void onClick(View v) {
     				m_device_security.releaseDeviceRegistration();
+    	    		m_release_button.setVisibility(Button.INVISIBLE);
+    	            m_login_button.setVisibility(Button.VISIBLE);
     			}
     		});
+
+            int req_id = m_device_security.checkLogin(spinner.getSelectedItem().toString());
+    		m_release_button.setVisibility(req_id>0 ? Button.VISIBLE : Button.INVISIBLE);
+            m_login_button.setVisibility(req_id==0 ? Button.VISIBLE : Button.INVISIBLE);
 
             return rootView;
         }
